@@ -51,25 +51,7 @@ public class MainActivity extends AppCompatActivity
         adapter = new ProductAdapter(this, productList);
         //set adapter to recycler view
         recyclerView.setAdapter(adapter);
-        //for search view
-        EditText editText=findViewById(R.id.editText);
-        editText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                filter(editable.toString());
-
-            }
-        });
 
         //end of search view
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
