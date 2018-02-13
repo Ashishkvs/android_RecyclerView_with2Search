@@ -3,6 +3,7 @@ package datazi.com.recyclersample;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -17,8 +18,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.SearchView;
+import android.widget.Spinner;
 
 
 import java.util.ArrayList;
@@ -36,8 +39,9 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //by default load fragment
+        loadFragment(new HomeFragment());
 
-        //FOR RECYCLER VIEW
 
         //attach recycler view id from xml
         recyclerView = findViewById(R.id.recycler_view);
@@ -54,6 +58,8 @@ public class MainActivity extends AppCompatActivity
 
 
         //end of search view
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -105,6 +111,15 @@ public class MainActivity extends AppCompatActivity
                 return false;
             }
         });
+        //create instance for Spinner item and fetch location from string.xml
+        MenuItem spinnerItem=menu.findItem(R.id.spinner);
+        Spinner spinner=(Spinner)spinnerItem.getActionView();
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.spinner_list_item_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        spinner.setAdapter(adapter);
+
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -166,5 +181,16 @@ public class MainActivity extends AppCompatActivity
 
         adapter.filterList(filteredList);
 
+    }
+    //LOAD FRAGMENT DYNAMICALLY
+    private boolean loadFragment(Fragment fragment){
+        if(fragment !=null){
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container,fragment)
+                    .commit();
+            return  true;
+        }
+        return false;
     }
 }
