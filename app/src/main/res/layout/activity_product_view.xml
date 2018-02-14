@@ -75,18 +75,17 @@
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/productRatingCount"
-            android:layout_below="@+id/productRatingCount"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="17dp"
 
+            android:layout_below="@+id/productRatingCount"
+            android:layout_marginTop="20dp"
+            android:layout_toStartOf="@+id/imageButton2"
             app:srcCompat="@drawable/ic_menu_share" />
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
 
             android:layout_alignTop="@+id/imageButton"
@@ -95,11 +94,11 @@
 
         <ImageButton
             android:id="@+id/imageButton3"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
 
-            android:layout_alignTop="@+id/imageButton2"
-            android:layout_toEndOf="@+id/productRatingCount"
+            android:layout_above="@+id/details"
+            android:layout_toEndOf="@+id/imageButton2"
             app:srcCompat="@drawable/ic_menu_send" />
 
         <TextView
@@ -121,7 +120,28 @@
             android:padding="3dp"
             android:text="TextViewsadsadasdasdasdasdasdsadsadsadasdasdsadsadasdsadsadasdsadasdas sad asdas asd " />
 
+        <Button
+            android:text="ADD TO CART"
+            android:id="@+id/cartButton"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/productDescription"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/buyButton"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:background="@color/colorAccent"
+            android:text="BUY NOW" />
+
+
     </RelativeLayout>
+
 
 
 </ScrollView>
