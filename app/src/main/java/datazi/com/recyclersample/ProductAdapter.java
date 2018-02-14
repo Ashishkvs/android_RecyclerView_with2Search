@@ -1,13 +1,16 @@
 package datazi.com.recyclersample;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +49,14 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         holder.textViewDesc.setText(product.getShortdesc());
         holder.textViewPrice.setText(String.valueOf(product.getPrice()));
         holder.textViewRating.setText(String.valueOf(product.getRating()));
-
+        holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Toast.makeText(view.getContext(),"Hello",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(context,ProductView.class);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -72,6 +82,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         TextView textViewDesc;
         TextView textViewRating;
         TextView textViewPrice;
+
         //in order to make all item clickable or any parent layout of above xml
         RelativeLayout relativeLayout;
 

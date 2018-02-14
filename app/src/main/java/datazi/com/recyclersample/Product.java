@@ -12,6 +12,7 @@ public class Product {
     private double rating;
     private double price;
     private int image;
+    private boolean inCart;
 
     public Product(int id, String title, String shortdesc, double rating, double price, int image) {
         this.id = id;
@@ -20,6 +21,7 @@ public class Product {
         this.rating = rating;
         this.price = price;
         this.image = image;
+
     }
 
     public int getId() {
@@ -68,5 +70,13 @@ public class Product {
 
     public void setImage(int image) {
         this.image = image;
+    }
+
+    public boolean isInCart() {
+        return inCart;
+    }
+
+    public void setInCart(boolean inCart) {
+        this.inCart = inCart;
     }
 }

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="datazi.com.recyclersample.ProductView">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:padding="3dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/coir2" />
+
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView"
+            android:padding="3dp"
+            android:text="COCONUT COIR"
+            android:textColor="@android:color/background_dark"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/productPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/productName"
+            android:padding="3dp"
+            android:text="Rs. 1,999"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/producDelivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/productPrice"
+            android:padding="3dp"
+            android:text="FREE DELIVERY"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/productRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/producDelivery"
+            android:background="@android:color/holo_blue_dark"
+            android:padding="3dp"
+            android:text="4.3*"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/productRatingCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/producDelivery"
+            android:layout_marginStart="14dp"
+            android:layout_toEndOf="@+id/productRating"
+            android:padding="3dp"
+            android:text="50 ratings and 15 reviews"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/productRatingCount"
+            android:layout_below="@+id/productRatingCount"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="17dp"
+
+            app:srcCompat="@drawable/ic_menu_share" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignTop="@+id/imageButton"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/ic_menu_gallery" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignTop="@+id/imageButton2"
+            android:layout_toEndOf="@+id/productRatingCount"
+            app:srcCompat="@drawable/ic_menu_send" />
+
+        <TextView
+            android:id="@+id/details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageButton"
+            android:text="Details"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/productDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/details"
+            android:padding="3dp"
+            android:text="TextViewsadsadasdasdasdasdasdsadsadsadasdasdsadsadasdsadsadasdsadasdas sad asdas asd " />
+
+    </RelativeLayout>
+
+
+</ScrollView>

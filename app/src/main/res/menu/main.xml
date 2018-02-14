@@ -10,6 +10,7 @@
         app:actionViewClass="android.widget.SearchView" />
     <item
         android:id="@+id/spinner"
+        android:icon="@android:drawable/ic_btn_speak_now"
         android:background="?attr/colorPrimaryDark"
         android:popupBackground="@android:color/transparent"
         android:title="ActionBar Spinner"
